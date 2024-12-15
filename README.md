@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Trivia web game - frontend React App
+A simple 10 question/answer Trivia game that uses its own backend service: https://github.com/Haxsen/TriviaWebGameBackend
+
+https://github.com/user-attachments/assets/c6cc2774-4526-415d-8a41-e9dd5eddbfea
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
