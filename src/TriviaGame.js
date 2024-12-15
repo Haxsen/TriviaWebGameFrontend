@@ -35,6 +35,11 @@ const TriviaGame = () => {
         }
     };
 
+    const decodeHtmlEntities = (encodedString) => {
+        const doc = new DOMParser().parseFromString(encodedString, 'text/html');
+        return doc.documentElement.textContent;
+    };
+
 	if (!questions) return null;
     return (
         <div className='app'>
@@ -50,16 +55,16 @@ const TriviaGame = () => {
                                 <div className='question-count'>
                                     <span>Question {currentQuestion + 1}</span>/{questions.length}
                                 </div>
-                                <div className='question-text'>{questions[currentQuestion].question}</div>
+                                <div className='question-text'>{decodeHtmlEntities(questions[currentQuestion].question)}</div>
                             </div>
                             <div className='answer-section'>
                                 {questions[currentQuestion].incorrect_answers.map((option, index) => (
                                     <button key={index} onClick={() => handleAnswerOptionClick(false)}>
-                                        {option}
+                                        {decodeHtmlEntities(option)}
                                     </button>
                                 ))}
                                 <button key='correct' onClick={() => handleAnswerOptionClick(true)}>
-									{questions[currentQuestion].correct_answer}
+									{decodeHtmlEntities(questions[currentQuestion].correct_answer)}
 								</button>
                             </div>
                         </div>
