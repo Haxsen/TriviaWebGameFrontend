@@ -1,6 +1,9 @@
 # Trivia web game - frontend React App
 A simple 10 question/answer Trivia game that uses its own backend service: https://github.com/Haxsen/TriviaWebGameBackend
 
+## See it live: https://triviawebgamefrontend.onrender.com/
+(you may have to wait 2 minutes for the server to get active)
+
 https://github.com/user-attachments/assets/c6cc2774-4526-415d-8a41-e9dd5eddbfea
 
 
