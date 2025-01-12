@@ -1,4 +1,3 @@
-// src/TriviaGame.js
 import React, { useState, useEffect } from 'react';
 import { getTriviaQuestions } from './services/api';
 

@@ -1,7 +1,7 @@
-// src/services/api.js
 import axios from 'axios';
 
-const API_URL = "https://localhost:7218/api/Trivia"; // Adjust this URL as needed
+// we should use a config class for env vars but this is just a quick way
+const API_URL = process.env.API_URL || "https://localhost:7218/api/Trivia";
 
 export const getTriviaQuestions = async () => {
     const response = await axios.get(`${API_URL}/questions`);
